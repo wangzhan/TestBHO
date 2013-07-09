@@ -1,0 +1,26 @@
+HKCR
+{
+	TestBHO.CBHOImp.1 = s 'CBHOImp Class'
+	{
+		CLSID = s '{5B32E3BE-BF20-4BE5-A8C4-0DBBD8243849}'
+	}
+	TestBHO.CBHOImp = s 'CBHOImp Class'
+	{
+		CLSID = s '{5B32E3BE-BF20-4BE5-A8C4-0DBBD8243849}'
+		CurVer = s 'TestBHO.CBHOImp.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {5B32E3BE-BF20-4BE5-A8C4-0DBBD8243849} = s 'CBHOImp Class'
+		{
+			ProgID = s 'TestBHO.CBHOImp.1'
+			VersionIndependentProgID = s 'TestBHO.CBHOImp'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{70F84A5B-AB48-4276-8F15-4C92BA9E35EB}'
+		}
+	}
+}

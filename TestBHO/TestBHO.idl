@@ -1,0 +1,36 @@
+// TestBHO.idl : IDL source for TestBHO
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (TestBHO.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(CFF3C7FF-3627-408F-B0F3-73936136EF5C),
+	dual,
+	nonextensible,
+	helpstring("ICBHOImp Interface"),
+	pointer_default(unique)
+]
+interface ICBHOImp : IDispatch{
+};
+[
+	uuid(70F84A5B-AB48-4276-8F15-4C92BA9E35EB),
+	version(1.0),
+	helpstring("TestBHO 1.0 Type Library")
+]
+library TestBHOLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(5B32E3BE-BF20-4BE5-A8C4-0DBBD8243849),
+		helpstring("CBHOImp Class")
+	]
+	coclass CBHOImp
+	{
+		[default] interface ICBHOImp;
+	};
+};

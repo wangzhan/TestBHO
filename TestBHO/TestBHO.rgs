@@ -1,0 +1,62 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'TestBHO'
+		'TestBHO.DLL'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}
+
+HKLM  
+{  
+    NoRemove SOFTWARE  
+    {  
+        NoRemove Microsoft  
+        {  
+            NoRemove Windows  
+            {  
+                NoRemove CurrentVersion  
+                {  
+                    NoRemove Explorer  
+                    {  
+                        NoRemove 'Browser Helper Objects'  
+                        {  
+                            ForceRemove {5B32E3BE-BF20-4BE5-A8C4-0DBBD8243849} = s 'CBHOImp Class'  
+                            {  
+                                val NoExplorer = d '1'  
+                            }  
+                        }  
+                    }         
+                }  
+            }  
+        }  
+    }  
+}  
+
+HKLM  
+{  
+    NoRemove Software  
+    {  
+        NoRemove Microsoft  
+        {  
+            NoRemove 'Internet Explorer'  
+            {  
+                NoRemove Extensions  
+                {  
+                    ForceRemove '{8DE55FAE-B7CE-44b8-8FC9-51BBFCF79DA0}'  
+                    {  
+                        val ButtonText = s 'Hello,World'  
+                        val Icon = s '%MODULE%,201'  
+                        val HotIcon = s '%MODULE%,202'  
+                        val CLSID = s '{1FBA04EE-3024-11d2-8F1F-0000F87ABD16}'  
+                        val ClsidExtension = s '{5B32E3BE-BF20-4BE5-A8C4-0DBBD8243849}'  
+                        val 'Default Visible' = s 'yes'  
+                    }  
+                }  
+            }  
+        }  
+    }  
+}  
