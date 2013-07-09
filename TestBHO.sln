@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestBHO", "TestBHO\TestBHO.vcproj", "{BF81A805-80F6-4DB1-9A93-5B923A60FD95}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestBHOPS", "TestBHO\TestBHOPS.vcproj", "{9D4090EF-6B85-4713-A244-9EAFF2E42D29}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BF81A805-80F6-4DB1-9A93-5B923A60FD95} = {BF81A805-80F6-4DB1-9A93-5B923A60FD95}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF81A805-80F6-4DB1-9A93-5B923A60FD95}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BF81A805-80F6-4DB1-9A93-5B923A60FD95}.Debug|Win32.Build.0 = Debug|Win32
+		{BF81A805-80F6-4DB1-9A93-5B923A60FD95}.Release|Win32.ActiveCfg = Release|Win32
+		{BF81A805-80F6-4DB1-9A93-5B923A60FD95}.Release|Win32.Build.0 = Release|Win32
+		{9D4090EF-6B85-4713-A244-9EAFF2E42D29}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9D4090EF-6B85-4713-A244-9EAFF2E42D29}.Release|Win32.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
