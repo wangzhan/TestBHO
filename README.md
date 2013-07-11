@@ -1,4 +1,4 @@
 TestBHO
 =======
 
-Test ie bho
+Test ie bho, vc++, vs2008
